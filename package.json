@@ -1,8 +1,12 @@
 {
   "name": "koa-sam-log",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Log output middleware for koa",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samfung09/koa-sam-log"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
