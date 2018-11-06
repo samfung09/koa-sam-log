@@ -1,0 +1,20 @@
+{
+  "name": "koa-sam-log",
+  "version": "1.0.1",
+  "description": "Log output middleware for koa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "koa",
+    "middleware",
+    "log4js",
+    "logger"
+  ],
+  "author": "samfung09",
+  "license": "ISC",
+  "dependencies": {
+    "log4js": "^3.0.6"
+  }
+}
