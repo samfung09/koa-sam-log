@@ -1,3 +1,14 @@
+/**
+ * @param {*} req ctx.req
+ * @method 获取客户端ip地址
+ */
+function getClientIp(req){
+    return req.headers['x-forwarded-for'] ||
+        req.connection.remoteAddress ||
+        req.socket.remoteAddress ||
+        req.connection.socket.remoteAddress;
+}
+
 function isMobile(userAgent){
     // 判断是移动端还是pc端
     return /Mobile/.test(userAgent) ? 'Mobile' : 'PC';
@@ -5,7 +16,7 @@ function isMobile(userAgent){
 
 module.exports = (ctx, message) => {
     let client = {
-        ip: ctx.request.ip,
+        ip: getClientIp(ctx.req),
         method: ctx.request.method,
         path: ctx.request.path,
         referer: ctx.request.headers['referer'],
